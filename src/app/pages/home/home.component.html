@@ -1,0 +1,26 @@
+<mat-list role="list">
+  <div mat-subheader>Lista de contatos</div>
+  <mat-list-item *ngFor="let contato of contatos">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <div mat-line>{{ contato.nome }}</div>
+    <mat-action-list>
+      <a
+        [href]="'tel:' + contato.telefone"
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        style="margin-right: 16px"
+      >
+        <mat-icon color="accent">phone</mat-icon>
+      </a>
+      <a
+        [href]="'mailto:' + contato.email"
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon color="accent">email</mat-icon>
+      </a>
+    </mat-action-list>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <div mat-subheader>Total: {{ contatos?.length }}</div>
+</mat-list>

@@ -15,4 +15,8 @@ export class ContatosService {
   getContatos() {
     return this.http.get<Contatos[]>(environment.apiUrl);
   }
+
+  getContatoId(id: string) {
+    return this.http.get<Contatos>(environment.apiUrl + '/' + id);
+  }
 }

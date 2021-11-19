@@ -1,1 +1,44 @@
-<p>contatos works!</p>
+<mat-toolbar>
+  <button mat-button aria-label="Voltar" (click)="voltar()">
+    <mat-icon>arrow_back</mat-icon>
+    Voltar
+  </button>
+  <span class="spacer"></span>
+  <button mat-icon-button aria-label="Editar">
+    <mat-icon>edit</mat-icon>
+  </button>
+</mat-toolbar>
+<div *ngIf="contato; else elseBlock">
+  <div style="text-align: center">
+    <mat-icon
+      mat-list-icon
+      style="font-size: 128px; width: 128px; height: 128px"
+      >account_circle</mat-icon
+    >
+    <h1 class="mat-display-1">{{ contato.nome }}</h1>
+  </div>
+  <mat-list role="list">
+    <div mat-subheader>Dados para contato</div>
+    <a [href]="'mailto:' + contato.email" mat-list-item>
+      <div mat-line>E-mail</div>
+      <div mat-line>{{ contato.email }}</div>
+      <mat-action-list>
+        <button mat-icon-button aria-label="Enviar e-mail">
+          <mat-icon color="accent">email</mat-icon>
+        </button>
+      </mat-action-list>
+    </a>
+    <a [href]="'tel:' + contato.telefone" mat-list-item>
+      <div mat-line>Telefone</div>
+      <div mat-line>{{ contato.telefone }}</div>
+      <mat-action-list>
+        <button mat-icon-button aria-label="Fazer uma ligação">
+          <mat-icon color="accent">phone</mat-icon>
+        </button>
+      </mat-action-list>
+    </a>
+  </mat-list>
+</div>
+<ng-template #elseBlock>
+  <mat-spinner color="accent" style="margin: 48px auto"></mat-spinner>
+</ng-template>

@@ -26,13 +26,13 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-mat-toolbar-row.container {
-  padding: 0;
-}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+  mat-toolbar-row.container {
+    padding: 0;
   }
 }
 

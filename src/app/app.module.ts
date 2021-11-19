@@ -11,13 +11,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './pages/home/home.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ContatosComponent } from './pages/contatos/contatos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ContatosComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { environment } from '../environments/environment';
     MatToolbarModule,
     MatListModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

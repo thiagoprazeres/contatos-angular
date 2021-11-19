@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080/api/v1/contatos'
+  // apiUrl: 'http://localhost:8080/api/v1/contatos'
+  apiUrl: 'https://contatos-blue.herokuapp.com/api/v1/contatos'
 };
 
 /*

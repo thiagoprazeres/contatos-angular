@@ -1,4 +1,4 @@
-<mat-list role="list">
+<mat-list role="list" *ngIf="contatos; else elseBlock">
   <div mat-subheader>Lista de contatos</div>
   <mat-list-item *ngFor="let contato of contatos">
     <mat-icon mat-list-icon>account_circle</mat-icon>
@@ -24,3 +24,6 @@
   <mat-divider></mat-divider>
   <div mat-subheader>Total: {{ contatos?.length }}</div>
 </mat-list>
+<ng-template #elseBlock>
+  <mat-spinner color="accent" style="margin: 48px auto"></mat-spinner>
+</ng-template>

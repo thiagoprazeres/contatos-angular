@@ -1,8 +1,8 @@
-import { Contatos } from './../../../interfaces/contatos';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ContatosService } from 'src/app/services/contatos.service';
+import { Contatos } from './../../../interfaces/contatos';
 
 @Component({
   selector: 'app-add',
@@ -31,11 +31,15 @@ export class AddComponent implements OnInit {
     this.carregando = true;
     const lead = {nome: contato.nome, email: contato.email, telefone: contato.telefone};
     console.log(lead);
-    this.contatosService.addContato(contato).subscribe((resContato: any) => this.voltar(), (err) => {
-      console.error(err);
-      this.carregando = false;
-    }
-  );
+    this.contatosService.addContato(contato).subscribe(
+      {
+        next: () => this.voltar(),
+        error: (err) => {
+          console.error(err);
+          this.carregando = false;
+        }
+      }
+    );
   }
 
 }

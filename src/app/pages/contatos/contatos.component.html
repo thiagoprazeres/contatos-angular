@@ -6,9 +6,13 @@
         Voltar
       </button>
       <span class="spacer"></span>
-      <button mat-icon-button aria-label="Editar">
+      <a
+        mat-icon-button
+        aria-label="Editar"
+        [routerLink]="['/contatos/edit', contato?.id]"
+      >
         <mat-icon>edit</mat-icon>
-      </button>
+      </a>
     </mat-toolbar-row>
   </mat-toolbar>
 </nav>

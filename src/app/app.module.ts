@@ -20,13 +20,15 @@ import { environment } from '../environments/environment';
 import { ContatosComponent } from './pages/contatos/contatos.component';
 import { AddComponent } from './pages/contatos/add/add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './pages/contatos/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContatosComponent,
-    AddComponent
+    AddComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

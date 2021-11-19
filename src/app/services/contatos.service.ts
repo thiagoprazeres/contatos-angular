@@ -22,4 +22,7 @@ export class ContatosService {
   addContato(contato: Contatos) {
     return this.http.post<any>(environment.apiUrl, contato);
   }
+  editContato(contato: Contatos) {
+    return this.http.put<any>(environment.apiUrl + '/' + contato.id, contato);
+  }
 }

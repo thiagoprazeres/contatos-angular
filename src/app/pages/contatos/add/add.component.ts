@@ -31,15 +31,13 @@ export class AddComponent implements OnInit {
     this.carregando = true;
     const lead = {nome: contato.nome, email: contato.email, telefone: contato.telefone};
     console.log(lead);
-    this.contatosService.addContato(contato).subscribe(
-      {
-        next: () => this.voltar(),
-        error: (err) => {
-          console.error(err);
-          this.carregando = false;
-        }
+    this.contatosService.addContato(contato).subscribe({
+      next: () => this.voltar(),
+      error: (err) => {
+        console.error(err);
+        this.carregando = false;
       }
-    );
+    });
   }
 
 }

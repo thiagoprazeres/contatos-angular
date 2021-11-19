@@ -47,9 +47,11 @@
       color="warn"
       type="submit"
       mat-raised-button
-      (click)="delete(contato.id)"
+      (click)="carregando = true; delete(contato.id)"
+      [disabled]="carregando"
     >
-      <mat-icon>delete</mat-icon> Apagar contato
+      <mat-icon>delete</mat-icon>
+      {{ carregando ? "Apagando contato..." : "Apagar contato" }}
     </button>
   </div>
 </div>

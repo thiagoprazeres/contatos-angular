@@ -1,0 +1,78 @@
+<nav>
+  <mat-toolbar>
+    <mat-toolbar-row class="container">
+      <button mat-button aria-label="Voltar" (click)="voltar()">
+        <mat-icon>arrow_back</mat-icon>
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<main>
+  <div class="container">
+    <div id="form-contatos" *ngIf="!carregando; else elseBlock">
+      <div style="text-align: center">
+        <mat-icon mat-list-icon class="avatar" color="primary"
+          >account_circle</mat-icon
+        >
+      </div>
+      <form
+        id="cardForm"
+        [formGroup]="cardForm"
+        (ngSubmit)="onSubmit(cardForm.value)"
+      >
+        <div>
+          <mat-form-field color="warn" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              formControlName="nome"
+              matInput
+              placeholder="Seu nome"
+              required
+            />
+            <mat-icon color="primary" matSuffix
+              >sentiment_very_satisfied</mat-icon
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field color="primary" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              formControlName="email"
+              matInput
+              placeholder="Seu e-mail"
+            />
+            <mat-icon color="primary" matSuffix>mail</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field color="accent" appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              formControlName="telefone"
+              matInput
+              placeholder="Seu telefone"
+            />
+            <mat-icon color="primary" matSuffix>phone</mat-icon>
+          </mat-form-field>
+        </div>
+        <button color="accent" type="submit" mat-raised-button>
+          <mat-icon>save</mat-icon> Salvar
+        </button>
+      </form>
+    </div>
+    <ng-template #elseBlock>
+      <mat-spinner color="accent"></mat-spinner>
+    </ng-template>
+  </div>
+</main>

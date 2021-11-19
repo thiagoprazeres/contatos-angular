@@ -1,7 +1,19 @@
-<mat-toolbar color="primary">
-  <span>Contatos</span>
-</mat-toolbar>
-<mat-list role="list" *ngIf="contatos; else elseBlock">
+<nav>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="container">
+      <h1>Contatos</h1>
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        aria-label="Adicionar contato"
+        routerLink="/contatos/add"
+      >
+        <mat-icon>person_add</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<mat-list role="list" *ngIf="contatos; else elseBlock" class="container">
   <div mat-subheader>Lista de contatos</div>
   <a
     mat-list-item

@@ -19,4 +19,7 @@ export class ContatosService {
   getContatoId(id: string) {
     return this.http.get<Contatos>(environment.apiUrl + '/' + id);
   }
+  addContato(contato: Contatos) {
+    return this.http.post<any>(environment.apiUrl, contato);
+  }
 }

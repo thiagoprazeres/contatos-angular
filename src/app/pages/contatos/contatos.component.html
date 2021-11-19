@@ -10,11 +10,7 @@
 </mat-toolbar>
 <div *ngIf="contato; else elseBlock">
   <div style="text-align: center">
-    <mat-icon
-      mat-list-icon
-      style="font-size: 128px; width: 128px; height: 128px"
-      >account_circle</mat-icon
-    >
+    <mat-icon mat-list-icon class="avatar">account_circle</mat-icon>
     <h1 class="mat-display-1">{{ contato.nome }}</h1>
   </div>
   <mat-list role="list">
@@ -40,5 +36,5 @@
   </mat-list>
 </div>
 <ng-template #elseBlock>
-  <mat-spinner color="accent" style="margin: 48px auto"></mat-spinner>
+  <mat-spinner color="accent"></mat-spinner>
 </ng-template>

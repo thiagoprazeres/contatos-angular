@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'contatos/edit/:id', component: EditComponent },
   { path: 'contatos/:id', component: ContatosComponent },
   {path: '', redirectTo: '/contatos', pathMatch: 'full'},
+  { path: '**', redirectTo: '/contatos', pathMatch: 'full' }
 ];
 
 @NgModule({

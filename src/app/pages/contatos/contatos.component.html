@@ -42,6 +42,16 @@
       </mat-action-list>
     </a>
   </mat-list>
+  <div style="margin-top: 48px; text-align: center; min-width: 180px">
+    <button
+      color="warn"
+      type="submit"
+      mat-raised-button
+      (click)="delete(contato.id)"
+    >
+      <mat-icon>delete</mat-icon> Apagar contato
+    </button>
+  </div>
 </div>
 <ng-template #elseBlock>
   <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>

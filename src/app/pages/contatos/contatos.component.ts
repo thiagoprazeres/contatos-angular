@@ -22,5 +22,8 @@ export class ContatosComponent implements OnInit {
   voltar() {
     this.location.back();
   }
+  delete(id: string) {
+    this.contatosService.deleteContato(id).subscribe(()=>this.voltar());
+  }
 
 }

@@ -25,4 +25,7 @@ export class ContatosService {
   editContato(contato: Contatos) {
     return this.http.put<any>(environment.apiUrl + '/' + contato.id, contato);
   }
+  deleteContato(id: string) {
+    return this.http.delete<any>(environment.apiUrl + '/' + id);
+  }
 }

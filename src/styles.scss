@@ -19,11 +19,15 @@ a {
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 .container {
+  width: 480px;
   max-width: 100%;
   padding-right: 12px;
   padding-left: 12px;
   margin-right: auto;
   margin-left: auto;
+}
+mat-toolbar-row.container {
+  padding: 0;
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -56,7 +60,7 @@ a {
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 480px;
   }
 }
 
@@ -70,8 +74,6 @@ mat-spinner {
   margin: 48px auto;
 }
 #cardForm {
-  max-width: 480px;
-  margin: 10px auto 0;
   mat-form-field {
     width: 100%;
   }

@@ -12,7 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -37,7 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressSpinnerModule,
+    MatProgressBarModule,
     MatInputModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

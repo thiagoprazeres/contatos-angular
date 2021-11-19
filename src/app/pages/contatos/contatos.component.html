@@ -1,14 +1,18 @@
-<mat-toolbar>
-  <button mat-button aria-label="Voltar" (click)="voltar()">
-    <mat-icon>arrow_back</mat-icon>
-    Voltar
-  </button>
-  <span class="spacer"></span>
-  <button mat-icon-button aria-label="Editar">
-    <mat-icon>edit</mat-icon>
-  </button>
-</mat-toolbar>
-<div *ngIf="contato; else elseBlock">
+<nav>
+  <mat-toolbar>
+    <mat-toolbar-row class="container">
+      <button mat-button aria-label="Voltar" (click)="voltar()">
+        <mat-icon>arrow_back</mat-icon>
+        Voltar
+      </button>
+      <span class="spacer"></span>
+      <button mat-icon-button aria-label="Editar">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<div *ngIf="contato; else elseBlock" class="container">
   <div style="text-align: center">
     <mat-icon mat-list-icon class="avatar">account_circle</mat-icon>
     <h1 class="mat-display-1">{{ contato.nome }}</h1>
@@ -36,5 +40,5 @@
   </mat-list>
 </div>
 <ng-template #elseBlock>
-  <mat-spinner color="accent"></mat-spinner>
+  <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
 </ng-template>

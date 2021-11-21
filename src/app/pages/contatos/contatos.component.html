@@ -21,7 +21,7 @@
     <mat-icon mat-list-icon class="avatar">account_circle</mat-icon>
     <h1 class="mat-display-1">{{ contato.nome }}</h1>
   </div>
-  <mat-list role="list">
+  <mat-nav-list role="list">
     <div mat-subheader>Dados para contato</div>
     <a [href]="'mailto:' + contato.email" mat-list-item>
       <div mat-line>E-mail</div>
@@ -41,7 +41,7 @@
         </button>
       </mat-action-list>
     </a>
-  </mat-list>
+  </mat-nav-list>
   <div style="margin-top: 48px; text-align: center; min-width: 180px">
     <button
       color="warn"

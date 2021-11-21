@@ -13,7 +13,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
 </nav>
-<mat-list role="list" *ngIf="contatos; else elseBlock" class="container">
+<mat-nav-list role="list" *ngIf="contatos; else elseBlock" class="container">
   <div mat-subheader>Lista de contatos</div>
   <a
     mat-list-item
@@ -30,7 +30,7 @@
   </a>
   <mat-divider></mat-divider>
   <div mat-subheader>Total: {{ contatos?.length }}</div>
-</mat-list>
+</mat-nav-list>
 <ng-template #elseBlock>
   <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
 </ng-template>
